@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amanuel Yenealm | Workstation &amp; Innovation Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Ethiopic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-yellow: #ffd21f;
+            --bg-yellow-soft: #fff6c2;
+            --bg-white: #ffffff;
+            --blue-deep: #0b2d6b;
+            --blue-mid: #13469e;
+            --blue-accent: #1d5fd1;
+            --blue-tint: #eaf1ff;
+            --text-dark: #091e42;
+            --text-muted: #294575;
+            --border-blue: #b8cdf2;
+            --shadow-card: 0 12px 28px rgba(11, 45, 107, 0.14);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            background-color: var(--bg-yellow);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', 'Noto Sans Ethiopic', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(180deg, #ffd21f 0%, #ffdf59 55%, #ffd21f 100%);
+            color: var(--text-dark);
+            line-height: 1.65;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font-family: inherit;
+            cursor: pointer;
+            border: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1120px;
+            margin: 0 auto;
+            padding-left: 14px;
+            padding-right: 14px;
+        }
+
+        /* Header */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 40;
+            background-color: var(--blue-deep);
+            color: var(--bg-white);
+            border-bottom: 3px solid var(--bg-yellow);
+            box-shadow: 0 6px 18px rgba(9, 30, 66, 0.22);
+            width: 100%;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            min-height: 64px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            flex-wrap: wrap;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 0;
+            flex: 1 1 auto;
+        }
+
+        .brand-badge {
+            width: 40px;
+            height: 40px;
+            border-radius: 11px;
+            background: linear-gradient(135deg, #ffd21f 0%, #ffea85 100%);
+            color: var(--blue-deep);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 16px;
+            flex-shrink: 0;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
+        }
+
+        .brand-title {
+            font-weight: 800;
+            font-size: 15px;
+            color: var(--bg-white);
+            display: block;
+            line-height: 1.2;
+        }
+
+        .brand-sub {
+            font-size: 11px;
+            color: var(--bg-yellow);
+            display: block;
+            line-height: 1.25;
+        }
+
+        .nav-links {
+            display: none;
+            align-items: center;
+            gap: 18px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-links a {
+            color: var(--bg-white);
+            padding: 6px 4px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--bg-yellow);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        .lang-btn {
+            background-color: var(--bg-white);
+            color: var(--blue-deep);
+            font-weight: 800;
+            font-size: 12px;
+            padding: 8px 12px;
+            border-radius: 10px;
+            border: 2px solid var(--bg-yellow);
+            min-height: 38px;
+        }
+
+        .lang-btn:hover {
+            background-color: var(--bg-yellow-soft);
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, #ffd21f 0%, #ffe473 100%);
+            color: var(--blue-deep);
+            font-weight: 800;
+            font-size: 13px;
+            padding: 8px 14px;
+            border-radius: 10px;
+            border: 2px solid var(--bg-yellow);
+            min-height: 38px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: transform 0.15s ease, background-color 0.2s ease;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-1px);
+            background: var(--bg-white);
+        }
+
+        .btn-blue {
+            background: linear-gradient(135deg, #13469e 0%, #0b2d6b 100%);
+            color: var(--bg-white);
+            font-weight: 700;
+            font-size: 13px;
+            padding: 9px 14px;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            min-height: 38px;
+            box-shadow: 0 4px 12px rgba(11, 45, 107, 0.18);
+        }
+
+        .btn-blue:hover {
+            background: var(--blue-deep);
+        }
+
+        .btn-outline-blue {
+            background-color: var(--bg-white);
+            color: var(--blue-deep);
+            border: 2px solid var(--blue-mid);
+            font-weight: 700;
+            font-size: 13px;
+            padding: 8px 13px;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            min-height: 38px;
+        }
+
+        .btn-outline-blue:hover {
+            background-color: var(--blue-tint);
+        }
+
+        /* Sections & Cards */
+        section {
+            padding-top: 28px;
+            padding-bottom: 28px;
+            width: 100%;
+        }
+
+        .hero-section {
+            padding-top: 24px;
+            padding-bottom: 20px;
+        }
+
+        .hero-card {
+            background-color: var(--bg-white);
+            border: 3px solid var(--blue-deep);
+            border-radius: 22px;
+            padding: 18px;
+            box-shadow: var(--shadow-card);
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 20px;
+            align-items: start;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .hero-card > div {
+            min-width: 0;
+            max-width: 100%;
+        }
+
+        .pill {
+            display: inline-block;
+            background-color: var(--blue-tint);
+            color: var(--blue-deep);
+            border: 1.5px solid var(--blue-mid);
+            font-weight: 800;
+            font-size: 11px;
+            padding: 5px 11px;
+            border-radius: 999px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 26px;
+            line-height: 1.22;
+            font-weight: 900;
+            color: var(--blue-deep);
+            word-wrap: break-word;
+        }
+
+        .hero-lead {
+            margin: 0 0 16px 0;
+            font-size: 15px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .highlights-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 10px;
+        }
+
+        .mini-stat {
+            background-color: var(--bg-yellow-soft);
+            border: 2px solid var(--blue-deep);
+            border-radius: 14px;
+            padding: 11px;
+        }
+
+        .mini-stat strong {
+            display: block;
+            font-size: 17px;
+            color: var(--blue-deep);
+            font-weight: 900;
+        }
+
+        .mini-stat span {
+            font-size: 11.5px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .visual-box {
+            background-color: var(--blue-tint);
+            border: 2px solid var(--blue-deep);
+            border-radius: 18px;
+            padding: 16px;
+        }
+
+        .visual-box h2 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            color: var(--blue-deep);
+            font-weight: 800;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 10px;
+        }
+
+        .checklist li {
+            background-color: var(--bg-white);
+            border: 1.5px solid var(--border-blue);
+            border-radius: 12px;
+            padding: 10px 12px;
+            font-size: 13.5px;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .section-head {
+            background-color: var(--bg-white);
+            border-left: 6px solid var(--blue-deep);
+            border-radius: 14px;
+            padding: 15px 18px;
+            margin-bottom: 18px;
+            box-shadow: 0 6px 18px rgba(11, 45, 107, 0.08);
+        }
+
+        .section-head h2 {
+            margin: 0 0 6px 0;
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--blue-deep);
+        }
+
+        .section-head p {
+            margin: 0;
+            font-size: 14.5px;
+            color: var(--text-muted);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 16px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 16px;
+        }
+
+        .card {
+            background-color: var(--bg-white);
+            border: 2.5px solid var(--blue-deep);
+            border-radius: 18px;
+            padding: 18px;
+            box-shadow: var(--shadow-card);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-width: 0;
+        }
+
+        .card h3 {
+            margin: 0 0 8px 0;
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--blue-deep);
+        }
+
+        .card p {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .tag-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 8px;
+        }
+
+        .tag {
+            background-color: var(--bg-yellow-soft);
+            color: var(--blue-deep);
+            border: 1.5px solid var(--blue-deep);
+            border-radius: 8px;
+            padding: 4px 9px;
+            font-size: 11.5px;
+            font-weight: 700;
+        }
+
+        .spec-list {
+            margin: 0;
+            padding-left: 18px;
+            color: var(--text-dark);
+            font-size: 13.5px;
+        }
+
+        .spec-list li {
+            margin-bottom: 6px;
+        }
+
+        .price-banner {
+            margin-top: 14px;
+            background-color: var(--blue-deep);
+            color: var(--bg-white);
+            border-radius: 12px;
+            padding: 12px 14px;
+            font-weight: 800;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .price-banner span.yellow-text {
+            color: var(--bg-yellow);
+        }
+
+        .media-box {
+            background-color: var(--blue-tint);
+            border: 2px solid var(--blue-mid);
+            border-radius: 14px;
+            padding: 13px;
+            margin-top: 10px;
+        }
+
+        .media-box p {
+            margin: 0 0 8px 0;
+            font-size: 13px;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .yt-embed-wrap {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid var(--blue-deep);
+            background-color: #091e42;
+            margin-top: 12px;
+        }
+
+        .yt-embed-wrap iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .action-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .copy-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            background-color: var(--bg-yellow-soft);
+            border: 1.5px solid var(--blue-deep);
+            border-radius: 10px;
+            padding: 8px 11px;
+            margin-top: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--blue-deep);
+            word-break: break-all;
+        }
+
+        .copy-btn {
+            background-color: var(--blue-mid);
+            color: var(--bg-white);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 6px 10px;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .copy-btn:hover {
+            background-color: var(--blue-deep);
+        }
+
+        /* Profile & Certificate Auto-Sliding Showcase */
+        .hero-showcase-panel {
+            background: linear-gradient(145deg, #fff8cc 0%, #fff29e 100%);
+            border: 2.5px solid var(--blue-deep);
+            border-radius: 18px;
+            padding: 14px;
+            margin-bottom: 16px;
+            max-width: 100%;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(11, 45, 107, 0.1);
+        }
+
+        .profile-banner-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            background-color: var(--bg-white);
+            border: 2px solid var(--blue-deep);
+            border-radius: 14px;
+            padding: 10px 12px;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 12px rgba(11, 45, 107, 0.08);
+            flex-wrap: wrap;
+        }
+
+        .profile-banner-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+            flex: 1 1 180px;
+        }
+
+        .profile-mini-avatar {
+            width: 68px;
+            height: 68px;
+            border-radius: 999px;
+            object-fit: cover;
+            border: 3px solid var(--bg-yellow);
+            outline: 2.5px solid var(--blue-deep);
+            background-color: var(--blue-deep);
+            flex-shrink: 0;
+            display: block;
+            cursor: zoom-in;
+            transition: transform 0.18s ease;
+        }
+
+        .profile-mini-avatar:hover {
+            transform: scale(1.05);
+        }
+
+        .hero-showcase-top {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .hero-showcase-title {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 900;
+            color: var(--blue-deep);
+        }
+
+        .slide-stage {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 8px;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .slide-arrow-btn {
+            width: 34px;
+            height: 92px;
+            border-radius: 11px;
+            background-color: var(--blue-deep);
+            color: var(--bg-yellow);
+            border: 2px solid var(--blue-deep);
+            font-size: 20px;
+            font-weight: 900;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(11, 45, 107, 0.22);
+            transition: background-color 0.2s ease, transform 0.15s ease;
+        }
+
+        .slide-arrow-btn:hover {
+            background-color: var(--blue-mid);
+            color: var(--bg-white);
+            transform: scale(1.03);
+        }
+
+        .hero-showcase-grid {
+            flex: 1 1 auto;
+            min-width: 0;
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 4px 2px 8px 2px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .cert-thumb-slot {
+            width: 118px;
+            flex: 0 0 118px;
+            background-color: var(--bg-white);
+            border: 2px solid var(--blue-mid);
+            border-radius: 12px;
+            padding: 6px;
+            text-align: center;
+            min-height: 94px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--blue-deep);
+            overflow: hidden;
+            cursor: zoom-in;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .cert-thumb-slot.active {
+            border-color: var(--blue-deep);
+            box-shadow: 0 0 0 2.5px var(--blue-mid);
+            background-color: var(--blue-tint);
+            transform: translateY(-2px);
+        }
+
+        .cert-thumb-slot img {
+            width: 100%;
+            height: 62px;
+            object-fit: cover;
+            border-radius: 7px;
+            display: block;
+            background-color: var(--blue-tint);
+        }
+
+        .cert-active-preview {
+            margin-top: 10px;
+            background-color: var(--bg-white);
+            border: 2px solid var(--blue-mid);
+            border-radius: 14px;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .cert-active-preview img {
+            width: 156px;
+            height: 104px;
+            object-fit: cover;
+            border-radius: 9px;
+            border: 2px solid var(--blue-deep);
+            background-color: var(--blue-tint);
+            flex-shrink: 0;
+            display: block;
+            cursor: zoom-in;
+            transition: transform 0.18s ease;
+        }
+
+        .cert-active-preview img:hover {
+            transform: scale(1.02);
+        }
+
+        .slide-dots {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 8px;
+            justify-content: center;
+        }
+
+        .slide-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 999px;
+            background-color: var(--border-blue);
+            border: 1px solid var(--blue-deep);
+            padding: 0;
+        }
+
+        .slide-dot.active {
+            width: 20px;
+            background-color: var(--blue-deep);
+        }
+
+        /* Fullscreen Lightbox Modal */
+        .lightbox-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            background-color: rgba(9, 30, 66, 0.94);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+
+        .lightbox-overlay.open {
+            display: flex;
+        }
+
+        .lightbox-inner {
+            position: relative;
+            width: 100%;
+            max-width: 960px;
+            max-height: 92vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .lightbox-top-bar {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            color: var(--bg-white);
+        }
+
+        .lightbox-caption {
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--bg-yellow);
+            background-color: rgba(11, 45, 107, 0.85);
+            border: 1.5px solid var(--bg-yellow);
+            padding: 7px 14px;
+            border-radius: 10px;
+        }
+
+        .lightbox-close-btn {
+            background-color: var(--bg-yellow);
+            color: var(--blue-deep);
+            font-weight: 900;
+            font-size: 15px;
+            padding: 8px 14px;
+            border-radius: 10px;
+        }
+
+        .lightbox-stage {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .lightbox-nav-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 999px;
+            background-color: var(--bg-yellow);
+            color: var(--blue-deep);
+            font-size: 20px;
+            font-weight: 900;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .lightbox-img {
+            max-width: 100%;
+            max-height: 76vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 14px;
+            border: 3px solid var(--bg-yellow);
+            background-color: #ffffff;
+            box-shadow: 0 18px 42px rgba(0, 0, 0, 0.5);
+        }
+
+        .toast-msg {
+            position: fixed;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--blue-deep);
+            color: var(--bg-yellow);
+            border: 2px solid var(--bg-yellow);
+            padding: 10px 18px;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 13px;
+            z-index: 120;
+            display: none;
+            box-shadow: 0 8px 20px rgba(9, 30, 66, 0.3);
+        }
+
+        .site-footer {
+            background-color: var(--blue-deep);
+            color: var(--bg-white);
+            border-top: 4px solid var(--bg-yellow);
+            padding: 22px 0;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 13.5px;
+        }
+
+        .site-footer span {
+            color: var(--bg-yellow);
+            font-weight: 700;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            .nav-links {
+                display: flex;
+            }
+
+            h1 {
+                font-size: 38px;
+            }
+
+            .hero-card {
+                grid-template-columns: 1.25fr 0.95fr;
+                padding: 32px;
+                gap: 24px;
+            }
+
+            .grid-2 {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 14px;
+            }
+
+            .grid-3 {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#top" class="brand">
+                <div class="brand-badge">AY</div>
+                <div>
+                    <span class="brand-title" data-en="Amanuel Yenealm" data-am="አማኑኤል የኔዓለም">Amanuel Yenealm</span>
+                    <span class="brand-sub" data-en="Dire Dawa, Ethiopia • Innovator &amp; Developer" data-am="ድሬዳዋ፣ ኢትዮጵያ • ፈጣሪ እና ዲቨሎፐር">Dire Dawa, Ethiopia • Innovator &amp; Developer</span>
+                </div>
+            </a>
+
+            <nav class="nav-links" aria-label="Primary Navigation">
+                <a href="#why-pc" data-en="Why a PC" data-am="ለምን ፒሲ">Why a PC</a>
+                <a href="#projects" data-en="Projects" data-am="ፕሮጀክቶች">Projects</a>
+                <a href="#agtech" data-en="AgTech Vision" data-am="የግብርና ራዕይ">AgTech Vision</a>
+                <a href="#credentials" data-en="Credentials" data-am="እውቅናዎች">Credentials</a>
+                <a href="#support" data-en="Contact &amp; Support" data-am="መገኛ እና ድጋፍ">Contact &amp; Support</a>
+            </nav>
+
+            <div class="header-actions">
+                <button type="button" id="lang-toggle" class="lang-btn" onclick="toggleLanguage()">አማርኛ / EN</button>
+                <a href="#support" class="cta-btn" data-en="Support PC" data-am="ድጋፍ ያድርጉ">Support PC</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="top">
+        <!-- 1. Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-card">
+                    <div>
+                        <span class="pill" data-en="DIRE DAWA, ETHIOPIA • WORKSTATION CROWDFUNDING" data-am="ድሬዳዋ፣ ኢትዮጵያ • የስራ ኮምፒውተር ድጋፍ ጥሪ">
+                            DIRE DAWA, ETHIOPIA • WORKSTATION CROWDFUNDING
+                        </span>
+                        <h1 data-en="Building Practical Hardware, Software &amp; AgTech from Dire Dawa" data-am="ከድሬዳዋ ተግባራዊ ሃርድዌር፣ ሶፍትዌር እና የግብርና ቴክኖሎጂ መገንባት">
+                            Building Practical Hardware, Software &amp; AgTech from Dire Dawa
+                        </h1>
+                        <p class="hero-lead" data-en="I am Amanuel Yenealm—a young software developer, electronics/hardware builder, and innovation competition participant scaling hands-on projects into real-world impact. A capable workstation PC will unlock faster coding, 3D modeling, simulation, and testing." data-am="እኔ አማኑኤል የኔዓለም ነኝ—ወጣት የሶፍትዌር ዲቨሎፐር፣ የሃርድዌር/ኤሌክትሮኒክስ ገንቢ እና የቴክኖሎጂ ውድድር ተሳታፊ። ጥሩ የስራ ኮምፒውተር (PC) ፕሮጀክቶቼን ለማስፋት፣ ለ3D ሞዴሊንግ፣ ለሲሙሌሽን እና ለሙከራ ከፍተኛ አቅም ይሰጠኛል።">
+                            I am Amanuel Yenealm—a young software developer, electronics/hardware builder, and innovation competition participant scaling hands-on projects into real-world impact. A capable workstation PC will unlock faster coding, 3D modeling, simulation, and testing.
+                        </p>
+
+                        <!-- Always-Visible Profile & Auto-Sliding Certificate Showcase -->
+                        <div class="hero-showcase-panel" id="hero-certificate-showcase">
+                            <div class="profile-banner-card">
+                                <div class="profile-banner-left">
+                                    <img id="hero-profile-preview" class="profile-mini-avatar" src="" alt="Amanuel Yenealm Profile" title="Tap to view full screen" onclick="openFullscreenProfile()">
+                                    <div style="min-width:0;">
+                                        <div style="font-size:14px; font-weight:900; color:#0b2d6b;" data-en="Amanuel Yenealm" data-am="አማኑኤል የኔዓለም">Amanuel Yenealm</div>
+                                        <div id="hero-profile-status" style="font-size:12px; color:#294575; font-weight:600;" data-en="Innovator &amp; Developer • Tap photo for full screen" data-am="ፈጣሪ እና ዲቨሎፐር • ሙሉ ስክሪን ለማየት ፎቶውን ይንኩ">Innovator &amp; Developer • Tap photo for full screen</div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn-outline-blue" onclick="openFullscreenProfile()" data-en="Full Screen" data-am="ሙሉ ስክሪን">
+                                    Full Screen
+                                </button>
+                            </div>
+
+                            <div class="hero-showcase-top">
+                                <p class="hero-showcase-title" data-en="Certificates Gallery (Tap Photo for Full Screen)" data-am="የሰርተፊኬቶች ማሳያ (ሙሉ ስክሪን ለማየት ፎቶ ይንኩ)">
+                                    Certificates Gallery (Tap Photo for Full Screen)
+                                </p>
+                                <div class="action-row">
+                                    <button type="button" id="auto-slide-btn" class="btn-outline-blue" onclick="toggleAutoSlide()" data-en="Auto: ON" data-am="ራስ-ሰር፦ በርቷል">Auto: ON</button>
+                                    <button type="button" class="btn-outline-blue" onclick="slideCertificates(-1)" aria-label="Previous Certificate">&lt;</button>
+                                    <button type="button" id="next-cert-btn" class="cta-btn" onclick="slideCertificates(1)" aria-label="Next Certificate">&gt;</button>
+                                </div>
+                            </div>
+
+                            <div id="hero-showcase-collapsible">
+                                <div class="slide-stage">
+                                    <button type="button" class="slide-arrow-btn" onclick="slideCertificates(-1)" title="Previous" aria-label="Previous Certificate">&lt;</button>
+                                    <div id="hero-cert-grid" class="hero-showcase-grid" aria-label="Certificate Slide Strip"></div>
+                                    <button type="button" class="slide-arrow-btn" onclick="slideCertificates(1)" title="Next" aria-label="Next Certificate">&gt;</button>
+                                </div>
+
+                                <div id="slide-dots" class="slide-dots" aria-label="Certificate Indicators"></div>
+
+                                <div id="hero-cert-active-preview" class="cert-active-preview">
+                                    <img id="hero-active-cert-img" src="" alt="Selected Certificate Preview" title="Tap to view full screen" onclick="openFullscreenCert(window.heroMediaState.selectedSlotIndex)">
+                                    <div style="flex:1; min-width:150px;">
+                                        <div id="hero-active-cert-label" style="font-weight:800; font-size:14px; color:#0b2d6b;">Certificate #1</div>
+                                        <div id="hero-active-cert-status" style="font-size:12px; color:#294575;">Tap image for full screen or press &gt;</div>
+                                    </div>
+                                    <button type="button" class="btn-blue" onclick="openFullscreenCert(window.heroMediaState.selectedSlotIndex)" data-en="View Full" data-am="ሙሉ እይታ">
+                                        View Full
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hero-actions">
+                            <a href="#support" class="btn-blue" data-en="Support the Workstation" data-am="የፒሲ ድጋፍ ያድርጉ">Support the Workstation</a>
+                            <a href="#projects" class="btn-outline-blue" data-en="Explore Projects" data-am="ፕሮጀክቶችን ይመልከቱ">Explore Projects</a>
+                        </div>
+
+                        <div class="highlights-row">
+                            <div class="mini-stat">
+                                <strong>14,000+</strong>
+                                <span data-en="INSA Camp Applicants (Semifinalist)" data-am="የINSA ካምፕ አመልካቾች (ግማሽ ፍጻሜ)">INSA Camp Applicants (Semifinalist)</span>
+                            </div>
+                            <div class="mini-stat">
+                                <strong>3+ Tracks</strong>
+                                <span data-en="EV Retrofit, Web/Apps &amp; Health" data-am="የEV ፕሮጀክት፣ ዌብ/አፕ እና ጤና">EV Retrofit, Web/Apps &amp; Health</span>
+                            </div>
+                            <div class="mini-stat">
+                                <strong>Next Goal</strong>
+                                <span data-en="AgTech &amp; Smart Farming" data-am="ዘመናዊ ግብርና (AgTech)">AgTech &amp; Smart Farming</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="visual-box">
+                        <h2 data-en="What Your Support Unlocks" data-am="ድጋፍዎ የሚያስገኘው ውጤት">What Your Support Unlocks</h2>
+                        <ul class="checklist">
+                            <li data-en="1. Multi-window full-stack coding, emulators, and local testing without mobile bottlenecks." data-am="1. በስልክ ውስንነት ሳይገደብ ሙሉ የሶፍትዌር ልማት፣ ኢሙሌተር እና የሙከራ ስራዎችን ማከናወን።"></li>
+                            <li data-en="2. Custom 3D CAD enclosure design and 3D print preparation for EV, sensor, and farm hardware." data-am="2. ለEV፣ ለሴንሰር እና ለግብርና መሳሪያዎች የ3D ዲዛይን እና የፕሪንት ዝግጅት መስራት።"></li>
+                            <li data-en="3. Circuit, battery, and system simulation before building physical prototypes." data-am="3. አካላዊ ፕሮቶታይፕ ከመስራት በፊት የሰርኪውት፣ የባትሪ እና የሲስተም ሲሙሌሽን ማካሄድ።"></li>
+                            <li data-en="4. Reliable local development environment for ongoing and future agriculture projects." data-am="4. ለአሁኑ እና ለወደፊት የግብርና ፕሮጀክቶች አስተማማኝ የልማት አካባቢ መፍጠር።"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Why a PC Section -->
+        <section id="why-pc">
+            <div class="container">
+                <div class="section-head">
+                    <h2 data-en="Why a Workstation PC Is Essential Now" data-am="ለምን የስራ ኮምፒውተር (Workstation PC) አሁን ወሳኝ ነው?">
+                        Why a Workstation PC Is Essential Now
+                    </h2>
+                    <p data-en="Mobile tools helped start ideas and learn fundamentals, but scaling engineering and software requires a dedicated workstation." data-am="የሞባይል መሳሪያዎች ሀሳቦችን ለመጀመርና መሰረታዊ ክህሎትን ለማዳበር ረድተዋል፤ ፕሮጀክቶችን ለማሳደግ ግን ጠንካራ ኮምፒውተር ያስፈልጋል።">
+                        Mobile tools helped start ideas and learn fundamentals, but scaling engineering and software requires a dedicated workstation.
+                    </p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <div>
+                            <h3 data-en="From Mobile Limits to Full Engineering Power" data-am="ከሞባይል ውስንነት ወደ ሙሉ የምህንድስና አቅም">
+                                From Mobile Limits to Full Engineering Power
+                            </h3>
+                            <p data-en="Working on a phone slows down complex codebases, database testing, UI/UX layout work, and documentation. With a capable PC, I can run code editors, local servers, CAD/3D tools, and simulation software smoothly in one workspace." data-am="በስልክ መስራት ውስብስብ ኮዶችን፣ የዳታቤዝ ሙከራዎችን እና ዲዛይንን ያዘገያል። በጠንካራ ፒሲ የኮድ ኤዲተሮችን፣ ሎካል ሰርቨሮችን፣ 3D ዲዛይን እና ሲሙሌሽን ሶፍትዌሮችን በአንድ ጊዜ በፍጥነት መስራት እችላለሁ።">
+                                Working on a phone slows down complex codebases, database testing, UI/UX layout work, and documentation. With a capable PC, I can run code editors, local servers, CAD/3D tools, and simulation software smoothly in one workspace.
+                            </p>
+                        </div>
+                        <div class="tag-row">
+                            <span class="tag" data-en="Faster Builds" data-am="ፈጣን ልማት">Faster Builds</span>
+                            <span class="tag" data-en="CAD &amp; Simulation" data-am="CAD እና ሲሙሌሽን">CAD &amp; Simulation</span>
+                            <span class="tag" data-en="Local Testing" data-am="የሎካል ሙከራ">Local Testing</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <h3 data-en="Real Impact in Dire Dawa &amp; Beyond" data-am="በድሬዳዋ እና ከዚያም አልፎ ተጨባጭ ለውጥ">
+                                Real Impact in Dire Dawa &amp; Beyond
+                            </h3>
+                            <p data-en="Every tool I build targets practical needs: cleaner mobility, digital tools for local businesses, patient health support ('ትርታ' heart-rate &amp; AI guidance), and smart agriculture solutions tailored to real conditions." data-am="የምሰራቸው እያንዳንዱ መሳሪያዎች ተግባራዊ ፍላጎቶችን ያነጣጠሩ ናቸው፦ የተሻለ መጓጓዣ፣ ለአካባቢው ስራዎች ዲጂታል መፍትሄ፣ ለበሽተኞች የልብ ምት ('ትርታ') እና የAI መመሪያ ድጋፍ፣ እንዲሁም ለዘመናዊ ግብርና የሚረዱ ፈጠራዎች።">
+                                Every tool I build targets practical needs: cleaner mobility, digital tools for local businesses, patient health support ('ትርታ' heart-rate &amp; AI guidance), and smart agriculture solutions tailored to real conditions.
+                            </p>
+                        </div>
+                        <div class="tag-row">
+                            <span class="tag" data-en="Patient Health ('ትርታ')" data-am="የበሽተኛ ጤና ('ትርታ')">Patient Health ('ትርታ')</span>
+                            <span class="tag" data-en="Solar EV &amp; Web" data-am="ሶላር EV እና ዌብ">Solar EV &amp; Web</span>
+                            <span class="tag" data-en="AgTech Ready" data-am="ለAgTech ዝግጁ">AgTech Ready</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Current Projects & Patient Health ('ትርታ') Section -->
+        <section id="projects">
+            <div class="container">
+                <div class="section-head">
+                    <h2 data-en="Current Engineering, Software &amp; Patient Health Projects" data-am="አሁን እየሰራኋቸው ያሉ የምህንድስና፣ ሶፍትዌር እና የበሽተኛ ጤና ፕሮጀክቶች">
+                        Current Engineering, Software &amp; Patient Health Projects
+                    </h2>
+                    <p data-en="Hands-on prototypes and software builds—including patient heart-rate monitoring ('ትርታ') with AI health guidance, featured on EBC." data-am="በተግባር የተሰሩ ፕሮቶታይፖች እና ሶፍትዌሮች—በEBC የተላለፈውን የበሽተኛ የልብ ምት መቆጣጠሪያ ('ትርታ') እና የAI የጤና መመሪያ ፕሮጀክት ጨምሮ።">
+                        Hands-on prototypes and software builds—including patient heart-rate monitoring ('ትርታ') with AI health guidance, featured on EBC.
+                    </p>
+                </div>
+
+                <div class="grid-3">
+                    <div class="card">
+                        <div>
+                            <h3 data-en="Patient Heart-Rate ('ትርታ') &amp; AI Guidance" data-am="የበሽተኛ የልብ ምት ('ትርታ') እና የAI መመሪያ">
+                                Patient Heart-Rate ('ትርታ') &amp; AI Guidance
+                            </h3>
+                            <p data-en="Health-tech prototype designed to track patient heart rate ('ትርታ') and provide accessible AI-assisted guidance and alerts, highlighted in the EBC feature." data-am="የበሽተኛን የልብ ምት ('ትርታ') ለመከታተል እና የAI የታገዘ የጤና መመሪያና ማንቂያ ለመስጠት የተሰራ ፕሮጀክት፤ በEBC ዘገባ ላይ የተጠቀሰ።">
+                                Health-tech prototype designed to track patient heart rate ('ትርታ') and provide accessible AI-assisted guidance and alerts, highlighted in the EBC feature.
+                            </p>
+                        </div>
+                        <div class="tag-row">
+                            <span class="tag" data-en="Patient Care" data-am="የበሽተኛ ክትትል">Patient Care</span>
+                            <span class="tag" data-en="Heart Rate ('ትርታ')" data-am="የልብ ምት ('ትርታ')">Heart Rate ('ትርታ')</span>
+                            <span class="tag">AI Guidance</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <h3 data-en="Solar-Assisted Electric Mobility &amp; Hardware" data-am="በሶላር የሚታገዝ የኤሌክትሪክ ተሽከርካሪ እና ሃርድዌር">
+                                Solar-Assisted Electric Mobility &amp; Hardware
+                            </h3>
+                            <p data-en="Practical electronics and electric drive prototyping focused on clean transport efficiency, battery/power management, and durable local builds." data-am="ንጹህ እንቅስቃሴን፣ የባትሪና የኃይል አስተዳደርን እና ጠንካራ የሃርድዌር ግንባታን የሚያተኩር የኤሌክትሮኒክስ እና የኤሌክትሪክ ሞተር ፕሮቶታይፕ ስራ።">
+                                Practical electronics and electric drive prototyping focused on clean transport efficiency, battery/power management, and durable local builds.
+                            </p>
+                        </div>
+                        <div class="tag-row">
+                            <span class="tag" data-en="Solar &amp; EV" data-am="ሶላር እና EV">Solar &amp; EV</span>
+                            <span class="tag" data-en="Electronics" data-am="ኤሌክትሮኒክስ">Electronics</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <h3 data-en="Web Platforms, QR Systems &amp; Apps" data-am="የዌብ ሲስተሞች፣ QR ሲስተም እና አፕሊኬሽኖች">
+                                Web Platforms, QR Systems &amp; Apps
+                            </h3>
+                            <p data-en="Full-stack web interfaces, QR-based workflows, and connected database tools built for practical everyday operations and community use." data-am="ለዕለታዊ ስራዎች እና ለማህበረሰብ አገልግሎት የሚውሉ የዌብ ፕላትፎርሞች፣ በQR ላይ የተመሰረቱ ሲስተሞች እና የዳታቤዝ መሳሪያዎች።">
+                                Full-stack web interfaces, QR-based workflows, and connected database tools built for practical everyday operations and community use.
+                            </p>
+                        </div>
+                        <div class="tag-row">
+                            <span class="tag" data-en="Web &amp; Mobile" data-am="ዌብ እና ሞባይል">Web &amp; Mobile</span>
+                            <span class="tag" data-en="QR &amp; Firebase" data-am="QR እና Firebase">QR &amp; Firebase</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Future Agriculture & AgTech Vision Section -->
+        <section id="agtech">
+            <div class="container">
+                <div class="section-head">
+                    <h2 data-en="Major Future Projects in Agriculture &amp; AgTech" data-am="በግብርና እና በዘመናዊ አግሪካልቸር (AgTech) ላይ ያሉኝ ትልልቅ የወደፊት ፕሮጀክቶች">
+                        Major Future Projects in Agriculture &amp; AgTech
+                    </h2>
+                    <p data-en="Agriculture is central to sustainable growth—I am preparing major hardware and software projects to help farmers monitor crops, water, and harvest workflows." data-am="ግብርና ለዘላቂ እድገት መሰረት ነው—አርሶ አደሮች የሰብል፣ የውሃ እና የምርት ስራዎችን በቀላሉ እንዲከታተሉ የሚያግዙ ትልልቅ የሃርድዌር እና የሶፍትዌር ፕሮጀክቶችን ለመስራት እየተዘጋጀሁ ነው።">
+                        Agriculture is central to sustainable growth—I am preparing major hardware and software projects to help farmers monitor crops, water, and harvest workflows.
+                    </p>
+                </div>
+
+                <div class="grid-3">
+                    <div class="card">
+                        <div>
+                            <h3 data-en="Smart Soil &amp; Microclimate Sensing" data-am="ዘመናዊ የአፈር እና የአየር ንብረት ሴንሰር">
+                                Smart Soil &amp; Microclimate Sensing
+                            </h3>
+                            <p data-en="Low-cost sensor nodes to track soil moisture, temperature, and field conditions so farmers can irrigate at the right time and conserve water." data-am="የአፈር እርጥበትን፣ ሙቀትን እና የማሳ ሁኔታን በመለካት ውሃን በቁጠባ እና በትክክለኛ ጊዜ ለማጠጣት የሚረዱ ሴንሰር መሳሪያዎች።">
+                                Low-cost sensor nodes to track soil moisture, temperature, and field conditions so farmers can irrigate at the right time and conserve water.
+                            </p>
+                        </div>
+                        <div class="tag-row">
+                            <span class="tag" data-en="Soil Moisture" data-am="የአፈር እርጥበት">Soil Moisture</span>
+                            <span class="tag" data-en="Water Saving" data-am="ውሃ ቆጣቢ">Water Saving</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <h3 data-en="Automated &amp; Solar Irrigation Control" data-am="በሶላር የሚሰራ አውቶማቲክ የመስኖ ቁጥጥር">
+                                Automated &amp; Solar Irrigation Control
+                            </h3>
+                            <p data-en="Combining solar energy with automated pump and valve control to reduce fuel reliance and support steady farming in sunny regions." data-am="የሶላር ኃይልን ከአውቶማቲክ የውሃ ፓምፕና ቫልቭ ቁጥጥር ጋር በማቀናጀት የነዳጅ ወጪን የሚቀንስ እና በፀሃያማ አካባቢዎች ግብርናን የሚደግፍ ሲስተም።">
+                                Combining solar energy with automated pump and valve control to reduce fuel reliance and support steady farming in sunny regions.
+                            </p>
+                        </div>
+                        <div class="tag-row">
+                            <span class="tag" data-en="Solar Irrigation" data-am="የሶላር መስኖ">Solar Irrigation</span>
+                            <span class="tag" data-en="Hardware Control" data-am="የሃርድዌር ቁጥጥር">Hardware Control</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <h3 data-en="Farm Advisory, Crop Tracking &amp; Market Links" data-am="የግብርና መረጃ፣ የሰብል ክትትል እና የገበያ ትስስር">
+                                Farm Advisory, Crop Tracking &amp; Market Links
+                            </h3>
+                            <p data-en="Bilingual web and mobile tools for planting schedules, pest/crop notes, yield records, and direct connections between growers and buyers." data-am="ለአዝመራ መርሃ ግብር፣ ለሰብል ክትትል፣ ለምርት መዝገብ እና በአምራቾችና በገዢዎች መካከል ግልጽ ግንኙነት ለመፍጠር የሚረዱ የሁለት ቋንቋ ዌብና ሞባይል መሳሪያዎች።">
+                                Bilingual web and mobile tools for planting schedules, pest/crop notes, yield records, and direct connections between growers and buyers.
+                            </p>
+                        </div>
+                        <div class="tag-row">
+                            <span class="tag" data-en="Agri Software" data-am="የግብርና ሶፍትዌር">Agri Software</span>
+                            <span class="tag" data-en="Amharic &amp; English" data-am="አማርኛ እና እንግሊዝኛ">Amharic &amp; English</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Credentials & EBC Media Feature Section -->
+        <section id="credentials">
+            <div class="container">
+                <div class="section-head">
+                    <h2 data-en="Credentials, Exhibitions &amp; EBC Media Feature" data-am="እውቅናዎች፣ ዐውደ ርዕዮች እና የEBC ሚዲያ ዘገባ">
+                        Credentials, Exhibitions &amp; EBC Media Feature
+                    </h2>
+                    <p data-en="Recognized through innovation competitions, training programs, school science &amp; technology exhibitions, and EBC coverage." data-am="በፈጠራ ውድድሮች፣ በስልጠና መርሃ ግብሮች፣ በትምህርት ቤት የሳይንስና ቴክኖሎጂ ዐውደ ርዕዮች እና በEBC ሚዲያ እውቅና የተሰጣቸው ስራዎች።">
+                        Recognized through innovation competitions, training programs, school science &amp; technology exhibitions, and EBC coverage.
+                    </p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <div>
+                            <h3 data-en="Verified Training, Competitions &amp; Certificates" data-am="የተረጋገጡ ስልጠናዎች፣ ውድድሮች እና ሰርተፊኬቶች">
+                                Verified Training, Competitions &amp; Certificates
+                            </h3>
+                            <ul class="spec-list">
+                                <li data-en="INSA Summer Camp (CTC) — Coding, JavaScript, C++, and software/mobile development track." data-am="INSA Summer Camp (CTC) — ኮዲንግ፣ JavaScript፣ C++ እና የሶፍትዌር/ሞባይል ልማት ስልጠና።"></li>
+                                <li data-en="Dire Dawa Administration Education Bureau — Schools' Science &amp; Technology Products Exhibitions (2016 E.C. / May 2024 &amp; Mariam Sefer Primary &amp; Secondary School representation)." data-am="የድሬዳዋ አስተዳደር ትምህርት ቢሮ — የት/ቤቶች የሳይንስና ቴክኖሎጂ ውጤቶች ዐውደ ርዕይ (ግንቦት 2016 ዓ.ም / May 2024 እና የማርያም ሰፈር 1ኛ እና 2ኛ ደረጃ ት/ቤት ተሳትፎ)።"></li>
+                                <li data-en="Dire Dawa Labour, Skill &amp; Technology Development Bureau — Secondary Schools Technology Innovation Competition (2015 E.C. / April 2023)." data-am="የድሬዳዋ የስራ ክህሎትና ቴክኖሎጂ ልማት ቢሮ — የ2ኛ ደረጃ ት/ቤቶች የቴክኖሎጂ ፈጠራ ውድድር (2015 ዓ.ም / ሚያዝያ 2023)።"></li>
+                                <li data-en="DigiTruck Ethiopia / iCog (17/10/2024) — Beginner Coding with Scratch Programming, Robotics Training &amp; Internet Basics." data-am="DigiTruck Ethiopia / iCog (17/10/2024) — የScratch ፕሮግራሚንግ፣ ሮቦቲክስ እና የኢንተርኔት መሰረታዊ ስልጠና ሰርተፊኬት።"></li>
+                                <li data-en="Mariam Sefer Primary &amp; Secondary School — Grade 11–12 Career &amp; Technical Education in Web Design (2017–2018 E.C.) &amp; Science/Technology Club Certificate (June 2016 E.C.)." data-am="ማርያም ሰፈር 1ኛ እና 2ኛ ደረጃ ት/ቤት — የ11ኛ እና 12ኛ ክፍል Web Design (2017–2018 ዓ.ም) እና የሳይንስና ቴክኖሎጂ ክበብ ሰርተፊኬት (ሰኔ 2016 ዓ.ም)።"></li>
+                            </ul>
+                        </div>
+                        <div class="action-row" style="margin-top:14px;">
+                            <button type="button" class="btn-blue" onclick="openFullscreenCert(window.heroMediaState.selectedSlotIndex)" data-en="Open Full Screen Gallery" data-am="ሰርተፊኬቶችን ሙሉ ስክሪን ክፈት">
+                                Open Full Screen Gallery
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <h3 data-en="EBC Feature — Innovation &amp; Patient Heart-Rate ('ትርታ')" data-am="የEBC ዘገባ — የፈጠራ ስራ እና የበሽተኛ የልብ ምት ('ትርታ')">
+                                EBC Feature — Innovation &amp; Patient Heart-Rate ('ትርታ')
+                            </h3>
+                            <p data-en="Watch the Ethiopian Broadcasting Corporation (EBC) feature highlighting student innovators, practical prototypes, and the 'ትርታ' heart-rate &amp; AI health guidance project." data-am="የኢትዮጵያ ብሮድካስቲንግ ኮርፖሬሽን (EBC) የተማሪ ፈጣሪዎችን፣ ተግባራዊ ፕሮቶታይፖችን እና የ'ትርታ' የልብ ምትና የAI ጤና መመሪያ ስራን የዘገበውን ቪዲዮ ይመልከቱ።">
+                                Watch the Ethiopian Broadcasting Corporation (EBC) feature highlighting student innovators, practical prototypes, and the 'ትርታ' heart-rate &amp; AI health guidance project.
+                            </p>
+
+                            <div class="media-box">
+                                <p data-en="Official EBC YouTube Video Link:" data-am="የEBC የዩቱብ ቪዲዮ ሊንክ፦">Official EBC YouTube Video Link:</p>
+                                <div class="copy-box">
+                                    <span>https://youtu.be/oq5TN-7em14?si=wWH85FECMzShSaLX</span>
+                                    <button type="button" class="copy-btn" onclick="copyText('https://youtu.be/oq5TN-7em14?si=wWH85FECMzShSaLX', 'EBC Link')" data-en="Copy" data-am="ቅዳ">Copy</button>
+                                </div>
+                                <div class="action-row" style="margin-top:12px;">
+                                    <a href="https://youtu.be/oq5TN-7em14?si=wWH85FECMzShSaLX" target="_blank" rel="noopener noreferrer" class="btn-blue" data-en="Open on YouTube" data-am="በYouTube ይክፈቱ">
+                                        Open on YouTube
+                                    </a>
+                                    <button type="button" class="btn-outline-blue" onclick="toggleInlineVideo()" data-en="Play / Hide Here" data-am="እዚሁ አጫውት / ደብቅ">
+                                        Play / Hide Here
+                                    </button>
+                                </div>
+
+                                <div id="ebc-video-player-box" class="yt-embed-wrap" style="display:block;">
+                                    <iframe
+                                        src="https://www.youtube.com/embed/oq5TN-7em14?si=wWH85FECMzShSaLX"
+                                        title="EBC Feature — Amanuel Yenealm"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tag-row">
+                            <span class="tag">EBC / EBC Dotstream</span>
+                            <span class="tag" data-en="Dire Dawa Innovation" data-am="የድሬዳዋ ፈጠራ">Dire Dawa Innovation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Workstation Target & Direct Support / Contact Section -->
+        <section id="support">
+            <div class="container">
+                <div class="section-head">
+                    <h2 data-en="Workstation Target, Direct Contact &amp; Bank Support" data-am="የፒሲ ዝርዝር፣ ቀጥታ አድራሻ እና የባንክ ድጋፍ">
+                        Workstation Target, Direct Contact &amp; Bank Support
+                    </h2>
+                    <p data-en="Every contribution—large or small—goes directly toward acquiring a dependable engineering workstation in Dire Dawa." data-am="ትልቅም ሆነ ትንሽ እያንዳንዱ ድጋፍ በድሬዳዋ አስተማማኝ የምህንድስና ኮምፒውተር ለማግኘት በቀጥታ ይውላል።">
+                        Every contribution—large or small—goes directly toward acquiring a dependable engineering workstation in Dire Dawa.
+                    </p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <div>
+                            <h3 data-en="Target Workstation Specifications" data-am="የሚፈለገው የስራ ኮምፒውተር (PC) ዝርዝር">
+                                Target Workstation Specifications
+                            </h3>
+                            <ul class="spec-list">
+                                <li data-en="Processor: Multi-core modern CPU (e.g., Core i7 / Ryzen 7 class) for fast compilation and multitasking." data-am="ፕሮሰሰር፦ ለፈጣን ኮድ ኮምፓይሌሽን እና ለብዙ ስራዎች የሚሆን ዘመናዊ ፕሮሰሰር (ለምሳሌ Core i7 ወይም Ryzen 7 ደረጃ)።"></li>
+                                <li data-en="Memory (RAM): 16GB–32GB RAM for IDEs, virtual environments, databases, and design tools." data-am="ራም (RAM)፦ ለኮድ ኤዲተሮች፣ ለዳታቤዝ እና ለዲዛይን ሶፍትዌሮች የሚበቃ 16GB–32GB ራም።"></li>
+                                <li data-en="Storage: 512GB–1TB NVMe SSD for fast boot, project files, datasets, and backups." data-am="ስቶሬጅ፦ ለፈጣን አከፋፋት፣ ለፕሮጀክት ፋይሎች እና ለመጠባበቂያ የሚሆን 512GB–1TB NVMe SSD።"></li>
+                                <li data-en="Graphics &amp; Power Backup: Dedicated GPU support for 3D/simulation tasks plus reliable power protection." data-am="ግራፊክስ እና ኃይል፦ ለ3D እና ለሲሙሌሽን የሚረዳ ግራፊክስ እንዲሁም የኃይል መቆራረጥ መከላከያ።"></li>
+                            </ul>
+                        </div>
+                        <div class="price-banner">
+                            <span data-en="Target Workstation Goal" data-am="የታለመው የፒሲ ድጋፍ መጠን">Target Workstation Goal</span>
+                            <span class="yellow-text" data-en="Workstation PC Fund" data-am="የስራ ፒሲ ድጋፍ">Workstation PC Fund</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <h3 data-en="Direct Contact &amp; Bank Accounts" data-am="ቀጥታ አድራሻ እና የባንክ ሂሳብ ቁጥሮች">
+                                Direct Contact &amp; Bank Accounts
+                            </h3>
+
+                            <div class="media-box" style="margin-top:8px;">
+                                <p data-en="Account Holder Name:" data-am="የሂሳብ ባለቤት ስም፦">Account Holder Name:</p>
+                                <div class="copy-box">
+                                    <span>Amanuel Yenealm</span>
+                                    <button type="button" class="copy-btn" onclick="copyText('Amanuel Yenealm', 'Name')" data-en="Copy" data-am="ቅዳ">Copy</button>
+                                </div>
+
+                                <p style="margin-top:10px;" data-en="Commercial Bank of Ethiopia (CBE):" data-am="የኢትዮጵያ ንግድ ባንክ (CBE)፦">Commercial Bank of Ethiopia (CBE):</p>
+                                <div class="copy-box">
+                                    <span>1000804047216</span>
+                                    <button type="button" class="copy-btn" onclick="copyText('1000804047216', 'CBE Account')" data-en="Copy" data-am="ቅዳ">Copy</button>
+                                </div>
+
+                                <p style="margin-top:10px;" data-en="Bank of Abyssinia (BOA):" data-am="ባንክ ኦፍ አቢሲኒያ (BOA)፦">Bank of Abyssinia (BOA):</p>
+                                <div class="copy-box">
+                                    <span>252344616</span>
+                                    <button type="button" class="copy-btn" onclick="copyText('252344616', 'BOA Account')" data-en="Copy" data-am="ቅዳ">Copy</button>
+                                </div>
+
+                                <p style="margin-top:10px;" data-en="Phone &amp; Email:" data-am="ስልክ እና ኢሜል፦">Phone &amp; Email:</p>
+                                <div class="copy-box">
+                                    <span>0961807959</span>
+                                    <button type="button" class="copy-btn" onclick="copyText('0961807959', 'Phone')" data-en="Copy" data-am="ቅዳ">Copy</button>
+                                </div>
+                                <div class="copy-box">
+                                    <span>amanuelyenealm613@gmail.com</span>
+                                    <button type="button" class="copy-btn" onclick="copyText('amanuelyenealm613@gmail.com', 'Email')" data-en="Copy" data-am="ቅዳ">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Fullscreen Image Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Fullscreen Photo Viewer" onclick="handleLightboxBackdropClick(event)">
+        <div class="lightbox-inner">
+            <div class="lightbox-top-bar">
+                <div id="lightbox-caption" class="lightbox-caption">Certificate #1</div>
+                <button type="button" class="lightbox-close-btn" onclick="closeFullscreenViewer()" aria-label="Close Fullscreen">✕ Close</button>
+            </div>
+            <div class="lightbox-stage">
+                <button type="button" id="lightbox-prev-btn" class="lightbox-nav-btn" onclick="stepLightbox(-1)" aria-label="Previous Image">&lt;</button>
+                <img id="lightbox-img" class="lightbox-img" src="" alt="Fullscreen View">
+                <button type="button" id="lightbox-next-btn" class="lightbox-nav-btn" onclick="stepLightbox(1)" aria-label="Next Image">&gt;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p style="margin:0 0 6px 0;" data-en="Amanuel Yenealm • Dire Dawa, Ethiopia • Hardware, Software, Health ('ትርታ') &amp; AgTech" data-am="አማኑኤል የኔዓለም • ድሬዳዋ፣ ኢትዮጵያ • ሃርድዌር፣ ሶፍትዌር፣ ጤና ('ትርታ') እና AgTech">
+                Amanuel Yenealm • Dire Dawa, Ethiopia • Hardware, Software, Health ('ትርታ') &amp; AgTech
+            </p>
+            <p style="margin:0; font-size:13px;">
+                <span>CBE: 1000804047216</span> •
+                <span>BOA: 252344616</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast-msg" role="status" aria-live="polite"></div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+        import { getAnalytics, isSupported as isAnalyticsSupported } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics.js";
+        import { getDatabase, ref as dbRef, get as dbGet } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCu9KnmGTByV8tgvBN1n6TCn66O9pcQPIo",
+            authDomain: "frend-58bf3.firebaseapp.com",
+            databaseURL: "https://frend-58bf3-default-rtdb.firebaseio.com",
+            projectId: "frend-58bf3",
+            storageBucket: "frend-58bf3.firebasestorage.app",
+            messagingSenderId: "49103792839",
+            appId: "1:49103792839:web:973a2479f079368e4a6ce2",
+            measurementId: "G-KKL3LJS5FG"
+        };
+
+        let dbInstance = null;
+
+        try {
+            const app = initializeApp(firebaseConfig);
+            dbInstance = getDatabase(app);
+            isAnalyticsSupported().then(function (ok) {
+                if (ok) {
+                    getAnalytics(app);
+                }
+            }).catch(function () {});
+        } catch (err) {
+            console.warn("Firebase init notice:", err);
+        }
+
+        function makeSvgDataUrl(svgMarkup) {
+            return "data:image/svg+xml;utf8," + encodeURIComponent(svgMarkup);
+        }
+
+        const DEFAULT_PROFILE_IMG = makeSvgDataUrl(`
+            <svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320">
+                <defs>
+                    <linearGradient id="pg" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#0b2d6b"/>
+                        <stop offset="100%" stop-color="#1d5fd1"/>
+                    </linearGradient>
+                </defs>
+                <rect width="320" height="320" rx="160" fill="url(#pg)"/>
+                <circle cx="160" cy="116" r="54" fill="#ffd21f"/>
+                <path d="M60 284 C68 212, 252 212, 260 284 Z" fill="#fff6c2"/>
+                <rect x="68" y="244" width="184" height="48" rx="24" fill="#091e42"/>
+                <text x="160" y="276" text-anchor="middle" fill="#ffd21f" font-family="Inter,sans-serif" font-size="24" font-weight="900">AY • DIRE DAWA</text>
+            </svg>
+        `);
+
+        const DEFAULT_CERTS = [
+            {
+                slot: 1,
+                name: "INSA Summer Camp (CTC)",
+                url: makeSvgDataUrl(`
+                    <svg xmlns="http://www.w3.org/2000/svg" width="840" height="540" viewBox="0 0 840 540">
+                        <rect width="840" height="540" rx="28" fill="#0b2d6b"/>
+                        <rect x="28" y="28" width="784" height="484" rx="20" fill="none" stroke="#ffd21f" stroke-width="5"/>
+                        <rect x="72" y="76" width="210" height="54" rx="14" fill="#ffd21f"/>
+                        <text x="177" y="112" text-anchor="middle" fill="#0b2d6b" font-family="Inter,sans-serif" font-size="24" font-weight="900">CERT #01</text>
+                        <text x="420" y="220" text-anchor="middle" fill="#ffffff" font-family="Inter,sans-serif" font-size="44" font-weight="800">INSA SUMMER CAMP</text>
+                        <text x="420" y="284" text-anchor="middle" fill="#ffd21f" font-family="Inter,sans-serif" font-size="28" font-weight="700">Coding • JavaScript • C++ • App Dev</text>
+                        <rect x="160" y="352" width="520" height="86" rx="18" fill="#13469e"/>
+                        <text x="420" y="404" text-anchor="middle" fill="#fff6c2" font-family="Inter,sans-serif" font-size="25" font-weight="700">Amanuel Yenealm • Semifinalist</text>
+                    </svg>
+                `)
+            },
+            {
+                slot: 2,
+                name: "Dire Dawa Sci-Tech Expo",
+                url: makeSvgDataUrl(`
+                    <svg xmlns="http://www.w3.org/2000/svg" width="840" height="540" viewBox="0 0 840 540">
+                        <rect width="840" height="540" rx="28" fill="#13469e"/>
+                        <rect x="28" y="28" width="784" height="484" rx="20" fill="none" stroke="#ffd21f" stroke-width="5"/>
+                        <rect x="72" y="76" width="210" height="54" rx="14" fill="#ffd21f"/>
+                        <text x="177" y="112" text-anchor="middle" fill="#0b2d6b" font-family="Inter,sans-serif" font-size="24" font-weight="900">CERT #02</text>
+                        <text x="420" y="220" text-anchor="middle" fill="#ffffff" font-family="Inter,sans-serif" font-size="42" font-weight="800">SCIENCE &amp; TECH EXPO</text>
+                        <text x="420" y="284" text-anchor="middle" fill="#ffd21f" font-family="Inter,sans-serif" font-size="28" font-weight="700">Dire Dawa Education Bureau</text>
+                        <rect x="150" y="352" width="540" height="86" rx="18" fill="#0b2d6b"/>
+                        <text x="420" y="404" text-anchor="middle" fill="#ffffff" font-family="Inter,sans-serif" font-size="25" font-weight="700">2016 E.C. • Practical Hardware &amp; Software</text>
+                    </svg>
+                `)
+            },
+            {
+                slot: 3,
+                name: "Tech Innovation Competition",
+                url: makeSvgDataUrl(`
+                    <svg xmlns="http://www.w3.org/2000/svg" width="840" height="540" viewBox="0 0 840 540">
+                        <rect width="840" height="540" rx="28" fill="#091e42"/>
+                        <rect x="28" y="28" width="784" height="484" rx="20" fill="none" stroke="#ffd21f" stroke-width="5"/>
+                        <rect x="72" y="76" width="210" height="54" rx="14" fill="#ffd21f"/>
+                        <text x="177" y="112" text-anchor="middle" fill="#091e42" font-family="Inter,sans-serif" font-size="24" font-weight="900">CERT #03</text>
+                        <text x="420" y="220" text-anchor="middle" fill="#ffd21f" font-family="Inter,sans-serif" font-size="40" font-weight="800">TECH INNOVATION AWARD</text>
+                        <text x="420" y="284" text-anchor="middle" fill="#ffffff" font-family="Inter,sans-serif" font-size="27" font-weight="700">Labour, Skill &amp; Technology Bureau</text>
+                        <rect x="170" y="352" width="500" height="86" rx="18" fill="#1d5fd1"/>
+                        <text x="420" y="404" text-anchor="middle" fill="#ffffff" font-family="Inter,sans-serif" font-size="25" font-weight="700">Secondary Schools Competition</text>
+                    </svg>
+                `)
+            },
+            {
+                slot: 4,
+                name: "DigiTruck / iCog Robotics",
+                url: makeSvgDataUrl(`
+                    <svg xmlns="http://www.w3.org/2000/svg" width="840" height="540" viewBox="0 0 840 540">
+                        <rect width="840" height="540" rx="28" fill="#1d5fd1"/>
+                        <rect x="28" y="28" width="784" height="484" rx="20" fill="none" stroke="#ffd21f" stroke-width="5"/>
+                        <rect x="72" y="76" width="210" height="54" rx="14" fill="#ffd21f"/>
+                        <text x="177" y="112" text-anchor="middle" fill="#0b2d6b" font-family="Inter,sans-serif" font-size="24" font-weight="900">CERT #04</text>
+                        <text x="420" y="220" text-anchor="middle" fill="#ffffff" font-family="Inter,sans-serif" font-size="42" font-weight="800">DIGITRUCK • iCOG</text>
+                        <text x="420" y="284" text-anchor="middle" fill="#fff6c2" font-family="Inter,sans-serif" font-size="28" font-weight="700">Scratch Coding &amp; Robotics Training</text>
+                        <rect x="170" y="352" width="500" height="86" rx="18" fill="#0b2d6b"/>
+                        <text x="420" y="404" text-anchor="middle" fill="#ffd21f" font-family="Inter,sans-serif" font-size="25" font-weight="700">Verified Certificate • 17/10/2024</text>
+                    </svg>
+                `)
+            },
+            {
+                slot: 5,
+                name: "Web Design & Tech Club",
+                url: makeSvgDataUrl(`
+                    <svg xmlns="http://www.w3.org/2000/svg" width="840" height="540" viewBox="0 0 840 540">
+                        <rect width="840" height="540" rx="28" fill="#0b2d6b"/>
+                        <rect x="28" y="28" width="784" height="484" rx="20" fill="none" stroke="#ffd21f" stroke-width="5"/>
+                        <rect x="72" y="76" width="210" height="54" rx="14" fill="#ffd21f"/>
+                        <text x="177" y="112" text-anchor="middle" fill="#0b2d6b" font-family="Inter,sans-serif" font-size="24" font-weight="900">CERT #05</text>
+                        <text x="420" y="220" text-anchor="middle" fill="#ffffff" font-family="Inter,sans-serif" font-size="40" font-weight="800">WEB DESIGN &amp; TECH CLUB</text>
+                        <text x="420" y="284" text-anchor="middle" fill="#ffd21f" font-family="Inter,sans-serif" font-size="27" font-weight="700">Mariam Sefer Primary &amp; Secondary</text>
+                        <rect x="170" y="352" width="500" height="86" rx="18" fill="#13469e"/>
+                        <text x="420" y="404" text-anchor="middle" fill="#ffffff" font-family="Inter,sans-serif" font-size="25" font-weight="700">Grade 11–12 CTE &amp; Science Club</text>
+                    </svg>
+                `)
+            },
+            {
+                slot: 6,
+                name: "EBC 'ትርታ' Health Feature",
+                url: makeSvgDataUrl(`
+                    <svg xmlns="http://www.w3.org/2000/svg" width="840" height="540" viewBox="0 0 840 540">
+                        <rect width="840" height="540" rx="28" fill="#13469e"/>
+                        <rect x="28" y="28" width="784" height="484" rx="20" fill="none" stroke="#ffd21f" stroke-width="5"/>
+                        <rect x="72" y="76" width="210" height="54" rx="14" fill="#ffd21f"/>
+                        <text x="177" y="112" text-anchor="middle" fill="#0b2d6b" font-family="Inter,sans-serif" font-size="24" font-weight="900">CERT #06</text>
+                        <text x="420" y="220" text-anchor="middle" fill="#ffd21f" font-family="Inter,sans-serif" font-size="40" font-weight="800">EBC MEDIA FEATURE</text>
+                        <text x="420" y="284" text-anchor="middle" fill="#ffffff" font-family="Inter,sans-serif" font-size="28" font-weight="700">Patient Heart-Rate ('ትርታ') &amp; AI</text>
+                        <rect x="170" y="352" width="500" height="86" rx="18" fill="#091e42"/>
+                        <text x="420" y="404" text-anchor="middle" fill="#ffd21f" font-family="Inter,sans-serif" font-size="25" font-weight="700">Dire Dawa Innovation Highlight</text>
+                    </svg>
+                `)
+            }
+        ];
+
+        const MAX_CERTS = 6;
+        const STORAGE_KEYS = ["ay_hero_media_v7", "ay_hero_media_v6"];
+
+        window.heroMediaState = {
+            profileDataUrl: "",
+            profileDownloadUrl: DEFAULT_PROFILE_IMG,
+            certificates: DEFAULT_CERTS.map(function (item) {
+                return {
+                    slot: item.slot,
+                    name: item.name,
+                    dataUrl: "",
+                    downloadUrl: item.url,
+                    isCustom: false
+                };
+            }),
+            selectedSlotIndex: 0,
+            autoSlide: true
+        };
+
+        let autoSlideTimer = null;
+        let lightboxMode = "cert"; // "cert" or "profile"
+        let lightboxIndex = 0;
+
+        function isValidImageSource(src) {
+            return typeof src === "string" && (
+                src.startsWith("data:image/") ||
+                src.startsWith("https://") ||
+                src.startsWith("http://")
+            );
+        }
+
+        function getProfileSrc() {
+            return window.heroMediaState.profileDataUrl || window.heroMediaState.profileDownloadUrl || DEFAULT_PROFILE_IMG;
+        }
+
+        function getCertSrc(i) {
+            const cert = window.heroMediaState.certificates[i];
+            return (cert && (cert.dataUrl || cert.downloadUrl)) || DEFAULT_CERTS[i].url;
+        }
+
+        function loadSavedMediaState() {
+            try {
+                let raw = "";
+                for (let k = 0; k < STORAGE_KEYS.length; k++) {
+                    const candidate = localStorage.getItem(STORAGE_KEYS[k]);
+                    if (candidate) {
+                        raw = candidate;
+                        break;
+                    }
+                }
+                if (!raw) return;
+                const parsed = JSON.parse(raw);
+
+                if (isValidImageSource(parsed.profileDataUrl)) {
+                    window.heroMediaState.profileDataUrl = parsed.profileDataUrl;
+                } else if (isValidImageSource(parsed.profileDownloadUrl)) {
+                    window.heroMediaState.profileDownloadUrl = parsed.profileDownloadUrl;
+                }
+
+                if (Array.isArray(parsed.certificates)) {
+                    for (let i = 0; i < MAX_CERTS; i++) {
+                        const saved = parsed.certificates[i];
+                        if (!saved) continue;
+                        const dUrl = isValidImageSource(saved.dataUrl) ? saved.dataUrl : "";
+                        const rUrl = isValidImageSource(saved.downloadUrl) ? saved.downloadUrl : DEFAULT_CERTS[i].url;
+                        window.heroMediaState.certificates[i] = {
+                            slot: i + 1,
+                            name: saved.name || DEFAULT_CERTS[i].name,
+                            dataUrl: dUrl,
+                            downloadUrl: rUrl,
+                            isCustom: Boolean(saved.isCustom || dUrl)
+                        };
+                    }
+                }
+
+                if (typeof parsed.selectedSlotIndex === "number" && parsed.selectedSlotIndex >= 0 && parsed.selectedSlotIndex < MAX_CERTS) {
+                    window.heroMediaState.selectedSlotIndex = parsed.selectedSlotIndex;
+                }
+                if (typeof parsed.autoSlide === "boolean") {
+                    window.heroMediaState.autoSlide = parsed.autoSlide;
+                }
+            } catch (err) {
+                console.warn("Local media load skipped:", err);
+            }
+        }
+
+        function saveMediaStateLocally() {
+            try {
+                localStorage.setItem(STORAGE_KEYS[0], JSON.stringify(window.heroMediaState));
+            } catch (err) {
+                console.warn("LocalStorage quota reached:", err);
+            }
+        }
+
+        window.renderHeroShowcase = function () {
+            const grid = document.getElementById("hero-cert-grid");
+            const dotsEl = document.getElementById("slide-dots");
+
+            if (grid) {
+                grid.innerHTML = "";
+                for (let i = 0; i < MAX_CERTS; i++) {
+                    const cert = window.heroMediaState.certificates[i];
+                    const isSelected = window.heroMediaState.selectedSlotIndex === i;
+                    const slotCard = document.createElement("div");
+                    slotCard.className = "cert-thumb-slot" + (isSelected ? " active" : "");
+                    slotCard.setAttribute("data-slot-index", String(i));
+                    slotCard.title = window.currentLang === "am" ? "ሙሉ ስክሪን ለማየት ይንኩ" : "Tap for full screen";
+
+                    const selectArea = document.createElement("button");
+                    selectArea.type = "button";
+                    selectArea.style.background = "transparent";
+                    selectArea.style.width = "100%";
+                    selectArea.style.padding = "0";
+                    selectArea.style.display = "flex";
+                    selectArea.style.flexDirection = "column";
+                    selectArea.style.alignItems = "center";
+                    selectArea.style.gap = "4px";
+                    selectArea.onclick = function () {
+                        window.heroMediaState.selectedSlotIndex = i;
+                        saveMediaStateLocally();
+                        window.renderHeroShowcase();
+                        window.openFullscreenCert(i);
+                    };
+
+                    const imgEl = document.createElement("img");
+                    imgEl.src = getCertSrc(i);
+                    imgEl.alt = cert.name || ("Certificate " + (i + 1));
+                    imgEl.onerror = function () {
+                        this.onerror = null;
+                        this.src = DEFAULT_CERTS[i].url;
+                    };
+
+                    const labelEl = document.createElement("span");
+                    const shortName = cert.name || ("Cert " + (i + 1));
+                    labelEl.textContent = "#" + (i + 1) + " • " + shortName.slice(0, 12);
+
+                    selectArea.appendChild(imgEl);
+                    selectArea.appendChild(labelEl);
+                    slotCard.appendChild(selectArea);
+                    grid.appendChild(slotCard);
+                }
+
+                const activeSlotEl = grid.querySelector('[data-slot-index="' + window.heroMediaState.selectedSlotIndex + '"]');
+                if (activeSlotEl) {
+                    const targetLeft = activeSlotEl.offsetLeft - Math.max(0, (grid.clientWidth - activeSlotEl.clientWidth) / 2);
+                    grid.scrollTo({ left: Math.max(0, targetLeft), behavior: "smooth" });
+                }
+            }
+
+            if (dotsEl) {
+                dotsEl.innerHTML = "";
+                for (let d = 0; d < MAX_CERTS; d++) {
+                    const dot = document.createElement("button");
+                    dot.type = "button";
+                    dot.className = "slide-dot" + (window.heroMediaState.selectedSlotIndex === d ? " active" : "");
+                    dot.setAttribute("aria-label", "Go to certificate " + (d + 1));
+                    dot.onclick = function () {
+                        window.heroMediaState.selectedSlotIndex = d;
+                        saveMediaStateLocally();
+                        window.renderHeroShowcase();
+                        restartAutoSlide();
+                    };
+                    dotsEl.appendChild(dot);
+                }
+            }
+
+            const idx = window.heroMediaState.selectedSlotIndex;
+            const activeCert = window.heroMediaState.certificates[idx] || window.heroMediaState.certificates[0];
+            const activeImg = document.getElementById("hero-active-cert-img");
+            const activeLabel = document.getElementById("hero-active-cert-label");
+            const activeStatus = document.getElementById("hero-active-cert-status");
+
+            if (activeImg) {
+                activeImg.src = getCertSrc(idx);
+                activeImg.onerror = function () {
+                    this.onerror = null;
+                    this.src = DEFAULT_CERTS[idx].url;
+                };
+            }
+            if (activeLabel) {
+                activeLabel.textContent = (window.currentLang === "am" ? "ሰርተፊኬት #" : "Certificate #") + activeCert.slot + (activeCert.name ? " — " + activeCert.name : "");
+            }
+            if (activeStatus) {
+                activeStatus.textContent = window.currentLang === "am"
+                    ? ("ሰርተፊኬት " + (idx + 1) + " ከ " + MAX_CERTS + " • ሙሉ ስክሪን ለማየት ፎቶውን ይንኩ")
+                    : ("Certificate " + (idx + 1) + " of " + MAX_CERTS + " • Tap photo for full screen");
+            }
+
+            const autoBtn = document.getElementById("auto-slide-btn");
+            if (autoBtn) {
+                if (window.currentLang === "am") {
+                    autoBtn.textContent = window.heroMediaState.autoSlide ? "ራስ-ሰር፦ በርቷል" : "ራስ-ሰር፦ ጠፍቷል";
+                } else {
+                    autoBtn.textContent = window.heroMediaState.autoSlide ? "Auto: ON" : "Auto: OFF";
+                }
+            }
+
+            const profileImg = document.getElementById("hero-profile-preview");
+            if (profileImg) {
+                profileImg.src = getProfileSrc();
+                profileImg.onerror = function () {
+                    this.onerror = null;
+                    this.src = DEFAULT_PROFILE_IMG;
+                };
+            }
+        };
+
+        function syncLightboxContent() {
+            const modal = document.getElementById("lightbox-modal");
+            const imgEl = document.getElementById("lightbox-img");
+            const captionEl = document.getElementById("lightbox-caption");
+            const prevBtn = document.getElementById("lightbox-prev-btn");
+            const nextBtn = document.getElementById("lightbox-next-btn");
+            if (!modal || !imgEl || !captionEl) return;
+
+            if (lightboxMode === "profile") {
+                imgEl.src = getProfileSrc();
+                imgEl.onerror = function () {
+                    this.onerror = null;
+                    this.src = DEFAULT_PROFILE_IMG;
+                };
+                captionEl.textContent = window.currentLang === "am"
+                    ? "አማኑኤል የኔዓለም — የፕሮፋይል ፎቶ"
+                    : "Amanuel Yenealm — Profile Photo";
+                if (prevBtn) prevBtn.style.visibility = "hidden";
+                if (nextBtn) nextBtn.style.visibility = "hidden";
+            } else {
+                const idx = (lightboxIndex + MAX_CERTS) % MAX_CERTS;
+                lightboxIndex = idx;
+                const cert = window.heroMediaState.certificates[idx] || window.heroMediaState.certificates[0];
+                imgEl.src = getCertSrc(idx);
+                imgEl.onerror = function () {
+                    this.onerror = null;
+                    this.src = DEFAULT_CERTS[idx].url;
+                };
+                captionEl.textContent = (window.currentLang === "am" ? "ሰርተፊኬት #" : "Certificate #") +
+                    cert.slot + (cert.name ? " — " + cert.name : "") +
+                    " (" + (idx + 1) + "/" + MAX_CERTS + ")";
+                if (prevBtn) prevBtn.style.visibility = "visible";
+                if (nextBtn) nextBtn.style.visibility = "visible";
+            }
+        }
+
+        window.openFullscreenCert = function (index) {
+            lightboxMode = "cert";
+            lightboxIndex = typeof index === "number" ? index : window.heroMediaState.selectedSlotIndex;
+            window.heroMediaState.selectedSlotIndex = (lightboxIndex + MAX_CERTS) % MAX_CERTS;
+            saveMediaStateLocally();
+            window.renderHeroShowcase();
+            syncLightboxContent();
+            const modal = document.getElementById("lightbox-modal");
+            if (modal) modal.classList.add("open");
+        };
+
+        window.openFullscreenProfile = function () {
+            lightboxMode = "profile";
+            syncLightboxContent();
+            const modal = document.getElementById("lightbox-modal");
+            if (modal) modal.classList.add("open");
+        };
+
+        window.closeFullscreenViewer = function () {
+            const modal = document.getElementById("lightbox-modal");
+            if (modal) modal.classList.remove("open");
+        };
+
+        window.stepLightbox = function (delta) {
+            if (lightboxMode !== "cert") return;
+            lightboxIndex = (lightboxIndex + (delta < 0 ? -1 : 1) + MAX_CERTS) % MAX_CERTS;
+            window.heroMediaState.selectedSlotIndex = lightboxIndex;
+            saveMediaStateLocally();
+            window.renderHeroShowcase();
+            syncLightboxContent();
+        };
+
+        window.handleLightboxBackdropClick = function (event) {
+            if (event && event.target && event.target.id === "lightbox-modal") {
+                window.closeFullscreenViewer();
+            }
+        };
+
+        document.addEventListener("keydown", function (e) {
+            const modal = document.getElementById("lightbox-modal");
+            if (!modal || !modal.classList.contains("open")) return;
+            if (e.key === "Escape") window.closeFullscreenViewer();
+            if (e.key === "ArrowRight") window.stepLightbox(1);
+            if (e.key === "ArrowLeft") window.stepLightbox(-1);
+        });
+
+        function restartAutoSlide() {
+            if (autoSlideTimer) {
+                clearInterval(autoSlideTimer);
+                autoSlideTimer = null;
+            }
+            if (window.heroMediaState.autoSlide) {
+                autoSlideTimer = setInterval(function () {
+                    window.heroMediaState.selectedSlotIndex =
+                        (window.heroMediaState.selectedSlotIndex + 1) % MAX_CERTS;
+                    window.renderHeroShowcase();
+                }, 3200);
+            }
+        }
+
+        window.slideCertificates = function (direction) {
+            const step = direction < 0 ? -1 : 1;
+            window.heroMediaState.selectedSlotIndex =
+                (window.heroMediaState.selectedSlotIndex + step + MAX_CERTS) % MAX_CERTS;
+            saveMediaStateLocally();
+            window.renderHeroShowcase();
+            restartAutoSlide();
+        };
+
+        window.toggleAutoSlide = function () {
+            window.heroMediaState.autoSlide = !window.heroMediaState.autoSlide;
+            saveMediaStateLocally();
+            window.renderHeroShowcase();
+            restartAutoSlide();
+        };
+
+        window.toggleInlineVideo = function () {
+            const box = document.getElementById("ebc-video-player-box");
+            if (!box) return;
+            box.style.display = box.style.display === "none" ? "block" : "none";
+        };
+
+        async function loadFromFirebaseRTDB() {
+            if (!dbInstance) return;
+            try {
+                const snapshot = await dbGet(dbRef(dbInstance, "portfolioMedia"));
+                const data = snapshot.val();
+                if (!data) return;
+
+                let loadedAny = false;
+
+                if (!window.heroMediaState.profileDataUrl && isValidImageSource(data.profilePhotoUrl)) {
+                    if (data.profilePhotoUrl.startsWith("data:image/")) {
+                        window.heroMediaState.profileDataUrl = data.profilePhotoUrl;
+                    } else {
+                        window.heroMediaState.profileDownloadUrl = data.profilePhotoUrl;
+                    }
+                    loadedAny = true;
+                }
+
+                if (Array.isArray(data.certificates)) {
+                    for (let i = 0; i < MAX_CERTS; i++) {
+                        const localCert = window.heroMediaState.certificates[i];
+                        const remote = data.certificates[i];
+                        if (!localCert.dataUrl && remote && isValidImageSource(remote.url)) {
+                            if (remote.url.startsWith("data:image/")) {
+                                window.heroMediaState.certificates[i] = {
+                                    slot: i + 1,
+                                    name: remote.name || DEFAULT_CERTS[i].name,
+                                    dataUrl: remote.url,
+                                    downloadUrl: localCert.downloadUrl || DEFAULT_CERTS[i].url,
+                                    isCustom: true
+                                };
+                            } else {
+                                window.heroMediaState.certificates[i] = {
+                                    slot: i + 1,
+                                    name: remote.name || DEFAULT_CERTS[i].name,
+                                    dataUrl: "",
+                                    downloadUrl: remote.url,
+                                    isCustom: true
+                                };
+                            }
+                            loadedAny = true;
+                        }
+                    }
+                }
+
+                if (loadedAny) {
+                    saveMediaStateLocally();
+                    window.renderHeroShowcase();
+                }
+            } catch (err) {
+                console.warn("Failed to load from Firebase:", err);
+            }
+        }
+
+        loadSavedMediaState();
+        window.renderHeroShowcase();
+        restartAutoSlide();
+        loadFromFirebaseRTDB();
+    </script>
+
+    <script>
+        let currentLang = "en";
+        window.currentLang = "en";
+
+        function applyLanguage(lang) {
+            currentLang = lang === "am" ? "am" : "en";
+            window.currentLang = currentLang;
+            document.documentElement.lang = currentLang;
+
+            const elements = document.querySelectorAll("[data-en][data-am]");
+            for (let i = 0; i < elements.length; i++) {
+                const el = elements[i];
+                const text = el.getAttribute(currentLang === "am" ? "data-am" : "data-en");
+                if (text !== null) {
+                    el.textContent = text;
+                }
+            }
+
+            const toggleBtn = document.getElementById("lang-toggle");
+            if (toggleBtn) {
+                toggleBtn.textContent = currentLang === "am" ? "English / አማ" : "አማርኛ / EN";
+            }
+
+            if (typeof window.renderHeroShowcase === "function") {
+                window.renderHeroShowcase();
+            }
+        }
+
+        function toggleLanguage() {
+            applyLanguage(currentLang === "en" ? "am" : "en");
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById("toast");
+            if (!toast) return;
+            toast.textContent = message;
+            toast.style.display = "block";
+            clearTimeout(window.__toastTimer);
+            window.__toastTimer = setTimeout(function () {
+                toast.style.display = "none";
+            }, 2400);
+        }
+
+        window.showToast = showToast;
+
+        function copyText(value, label) {
+            try {
+                const tempInput = document.createElement("textarea");
+                tempInput.value = value;
+                tempInput.setAttribute("readonly", "");
+                tempInput.style.position = "fixed";
+                tempInput.style.left = "-9999px";
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand("copy");
+                document.body.removeChild(tempInput);
+                showToast(
+                    currentLang === "am"
+                        ? label + " ተቀድቷል (" + value + ")"
+                        : "Copied " + label + ": " + value
+                );
+            } catch (err) {
+                showToast(value);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            applyLanguage("en");
+        });
+    </script>
+</body>
+</html>
